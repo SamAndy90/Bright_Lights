@@ -1,5 +1,5 @@
 {
-  "homepage": "https://SamAndy90.github.io/brightl",
+  "homepage": "https://SamAndy90.github.io/Bright_Lights",
   "name": "gulp--2022",
   "version": "1.0.0",
   "description": "",
@@ -11,7 +11,7 @@
     "deploy": "gh-pages -d dist",
     "build": "gulp build --build",
     "zip": "gulp deployZIP --build",
-    "gulpdeploy": "gulp deployFTP --build",
+    "ftp": "gulp deployFTP --build",
     "svgSprive": "gulp svgSprive"
   },
   "author": "Andrii Stadnyk",
