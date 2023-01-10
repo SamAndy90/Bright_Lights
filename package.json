@@ -1,4 +1,5 @@
 {
+  "homepage": "https://SamAndy90.github.io/brightl",
   "name": "gulp--2022",
   "version": "1.0.0",
   "description": "",
@@ -6,9 +7,11 @@
   "type": "module",
   "scripts": {
     "dev": "gulp",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "gulp build --build",
     "zip": "gulp deployZIP --build",
-    "deploy": "gulp deployFTP --build",
+    "gulpdeploy": "gulp deployFTP --build",
     "svgSprive": "gulp svgSprive"
   },
   "author": "Andrii Stadnyk",
