@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "gulp",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "build": "gulp build --build",
     "zip": "gulp deployZIP --build",
     "gulpdeploy": "gulp deployFTP --build",
