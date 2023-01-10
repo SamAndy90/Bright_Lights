@@ -1,0 +1,75 @@
+.main-block {
+    position: relative;
+    background: url("@img/main/main-background.jpeg") center / cover no-repeat;
+    box-shadow: 0, 4px, 4px, rgba(0, 0, 0, 0.25);
+    &__content {
+        position: relative;
+        z-index: 5;
+        @include adaptive-value("padding-top", 412, 170, 1);
+        @include adaptive-value("padding-bottom", 279, 160, 1);
+    }
+    &__subtitle {
+        @include adaptive-value("margin-bottom", 10, 25, 1);
+    }
+    &__title {
+        @include adaptive-value("font-size", 100, 68, 1);
+        line-height: math.div(150, 100);
+        @media (max-width: $mobileSmall) {
+            line-height: math.div(130, 100);
+        }
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px #fff;
+        margin-bottom: 50px;
+    }
+}
+
+.player {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include adaptive-value("gap", 46, 15, 1);
+    &__play--main {
+        position: relative;
+        width: 22px;
+        height: 25px;
+        cursor: pointer;
+    }
+    &__play-image--main {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: contain;
+    }
+    &__audio--main {
+    }
+    &__progressbar-wrapper--main {
+        max-width: 887px;
+        width: 100%;
+        padding: 10px 0;
+        cursor: pointer;
+    }
+    &__progressbar-container--main {
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+    &__progressbar--main {
+        height: 100%;
+        background: $violet;
+    }
+    &__cursor--main {
+    }
+    &__timer--main {
+        flex: 0 0 auto;
+        line-height: math.div(27, 18);
+        font-weight: 500;
+        @include adaptive-value("font-size", 18, 10, 1);
+        @include adaptive-value("width", 112, 63, 1);
+        text-align: end;
+    }
+}

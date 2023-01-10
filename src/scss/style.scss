@@ -1,0 +1,160 @@
+@use "sass:math";
+
+// Підключення функцій та міксинів.
+@import 'functions';
+
+// Підключення шрифтів
+// &display=swap - добавити при підключенні через плагін
+// @import url();
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+// Підключити, якщо є локальні файли шрифта.
+// @import 'fonts';
+
+
+// ==============================================================================================
+// Налаштування шаблону  ========================================================================
+// ==============================================================================================
+
+// Шрифт за замовчуванням
+$fontFamily: 'Poppins', sans-serif;
+$fontSize: rem(18);
+
+// Основні кольори
+$mainColor: #fff;
+$bgColor: #1C1B21;
+
+$violet: #7A66CC;
+$grey: #2F2B2B;
+
+
+// Налаштування сітки
+
+// Мінімальна ширина сторінки
+$minWidth: 320px;
+
+// Ширина полотна
+$maxWidth: 1920;
+
+// Ширина контейнера
+$maxWidthContainer: 1110;
+
+// Загальний відступ у контейнера
+// (30 = по 15 зліва і справа)
+$containerPadding: 30;
+
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Брейк-поінти
+$pc: em($containerWidth); // ПК, ноутбуки, деякі планшети в горизонтальному положенні
+$tablet: em(991.98); // Планшети, деякі телефони в горизонтальному положенні
+$mobile: em(767.98); // Телефони L
+$mobileSmall: em(479.98); // Телефони S
+
+// Тип адаптива:
+// 1 - відзивчивий (в контейнера нема брейкпоінтів)
+// 2 - по брейкпоінтам (контейнер міняє свою ширину по брейкпоінтам)
+$responsiveType: 1;  // Потрібно розібратись
+
+
+// ==============================================================================================
+// ==============================================================================================
+
+// Обнулення стилів =============================================================================
+@import 'base';
+
+// Стилі тега body ==============================================================================
+body {
+    .lock & {
+        overflow: hidden;
+        touch-action: none;
+        overscroll-behavior: none;
+    };
+    // Сайт загружений
+    // .loaded & {
+    // }
+};
+
+// Обгортка wrapper ==============================================================================
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    //Сайт загружений
+    // .loaded & {
+    // }
+    // Прижимаєм футер
+    > main {
+        flex: 1 1 auto;
+    }
+    // Фікс для слайдерів
+    // > * {
+    //     min-width: 0;
+    // };
+};
+
+// Обмежуючий контейнер ==========================================================================
+/*
+(i) Стилі будуть застосовуватисю до всіх класів, що містять *__container
+Наприклад: header__container, main__container.
+*/
+@if ($responsiveType==1) {
+    // Responsive
+    [class*="__container"] {
+        @if ($maxWidthContainer>0) {
+            max-width: rem($maxWidthContainer);
+            box-sizing: content-box;
+            margin: 0 auto;
+        }
+        @if ($containerPadding>0) {
+            padding: 0 rem(math.div($containerPadding, 2));
+        }
+    }
+} @else {
+    // Breakpoints
+    [class*="__container"] {
+        margin: 0 auto;
+        @if ($maxWidthContainer>0) {
+            max-width: rem($maxWidthContainer);
+            box-sizing: content-box;
+        } @else {
+            @if ($containerPadding>0) {
+                padding: 0 rem(math.div($containerPadding, 2));
+            }
+        }
+        @media (max-width: $pc) {
+            max-width: rem(970);
+        }
+        @media (max-width: $tablet) {
+            max-width: rem(750);
+        }
+        @media (max-width: $mobile) {
+            max-width: none;
+            @if ($containerPadding>0 and $maxWidthContainer>0) {
+                padding: 0 rem(math.div($containerPadding, 2));
+            }
+        }
+    }
+}
+
+
+
+// Підключення стилів спільних елементів проекту
+@import 'common';
+
+// Підключення стилів компонентів сторінки
+@import 'components/header';
+
+@import 'components/mainBlock';
+@import 'components/highlights';
+@import 'components/about';
+@import 'components/news';
+@import 'components/music';
+@import 'components/media';
+@import '../../node_modules/swiper/swiper-bundle';
+@import 'components/tours';
+@import 'components/contacts';
+
+@import 'components/footer';

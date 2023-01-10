@@ -1,0 +1,122 @@
+.page__about {
+    @include adaptive-value('margin-bottom', 150, 90, 1);
+}
+
+.about {
+    @media (max-width: $mobile) {
+        padding-top: 60px;
+    }
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            gap: 50px
+        }
+    }
+    &__info {
+        flex: 0 1 48%;
+        align-self: start;
+        @media (max-width: $mobile) {
+            flex: 0 1 100%;
+        }
+    }
+    &__title {
+        @include adaptive-value('font-size', 48, 31, 1);
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        @include adaptive-value('gap', 30, 20, 1);
+        &::before {
+            content: "";
+            background: url("@img/about/about-logo.svg");
+            width: 64px;
+            height: 31px;
+        }
+        @include adaptive-value('margin-bottom', 60, 20, 1);
+    }
+    &__text {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 60px;
+        line-height: math.div(24, 16);
+        font-weight: 400;
+    }
+    &__list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        @media (max-width: $mobileSmall) {
+            flex-direction: column;
+        }
+    }
+    &__item {
+        font-weight: 600;
+        line-height: 30px;
+        flex: 0 0 50%;
+        padding-left: 50px;
+        box-sizing: border-box;
+        position: relative;
+        &--mb {
+            @media (min-width: $mobileSmall) {
+                margin-bottom: 30px;
+            }
+        }
+        &:not(:last-child) {
+            @media (max-width: $mobileSmall) {
+                margin-bottom: 30px;
+            }
+        }
+        padding-right: 15px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30px;
+            height: 30px;
+            border-radius: 10px 0;
+            background-color: $violet;
+            transition: all 0.3s ease;
+        }
+        &:hover::before {
+            box-shadow: 0 0 10px $violet;
+        }
+    }
+
+    &__media {
+        flex: 0 1 40%;
+        @media (max-width: $mobile) {
+            width: 75%;
+        }
+        @media (max-width: $mobileSmall) {
+            width: 100%;
+        }
+        &--wrapper {
+            height: 446px;
+            @media (max-width: $mobileSmall) {
+                @include adaptive-value('height', 1200, 320, 1);
+            }
+            position: relative;
+        }
+        &--front {
+            position: absolute;
+            max-width: 78.65%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        &--behind {
+            position: absolute;
+            max-width: 78.65%;
+            bottom: 0;
+            right: 0;
+        }
+        &--item {
+            object-fit: cover;
+            border-radius: 30px 0 30px 0;
+        }
+    }
+}

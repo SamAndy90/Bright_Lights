@@ -1,0 +1,83 @@
+.page__news {
+    @include adaptive-value("margin-bottom", 180, 90, 1);
+}
+
+.news {
+    &__container {
+    }
+    &__body {
+        @include adaptive-value("padding-top", 85, 0, 1);
+        @include adaptive-value("padding-bottom", 85, 0, 1);
+        position: relative;
+    }
+    &__content {
+        border: 1px solid #fff;
+        border-radius: 30px 0;
+        padding: 50px 0 50px 80px;
+        @include adaptive-value("padding-top", 50, 20, 1);
+        @include adaptive-value("padding-bottom", 50, 30, 1);
+        @include adaptive-value("padding-left", 80, 30, 1);
+        padding-right: 45%;
+        @media (max-width: $mobileSmall) {
+            margin-bottom: 30px;
+            @include adaptive-value("padding-right", 40, 30, 1);
+        }
+    }
+    &__text {
+        max-width: 520px;
+        @include adaptive-value("padding-bottom", 25, 15, 1);
+        position: relative;
+        font-weight: 400;
+        line-height: math.div(27, 18);
+        &::before {
+            content: "";
+            width: 100%;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.6);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        &::after {
+            content: '';
+            background: url("@img/news/news-quotes.svg") left top no-repeat;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        margin-bottom: 25px;
+        @include adaptive-value("margin-bottom", 25, 15, 1);
+    }
+
+    &__link {
+        color: $violet;
+        font-weight: 700;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__photo {
+        position: absolute;
+        width: 36%;
+        height: 100%;
+        top: 0;
+        right: 7%;
+        object-fit: contain;
+        object-position: right;
+        border-radius: 30px 0;
+        @media (max-width: $mobile) {
+            right: 20px;
+            width: 40%;
+        }
+        @media (max-width: $mobileSmall) {
+            position: relative;
+            right: initial;
+            width: auto;
+            display: block;
+            margin: auto;
+        }
+    }
+}

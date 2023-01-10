@@ -1,0 +1,9 @@
+.footer__content {
+    font-size: rem(13);
+    line-height: math.div(20, 13);
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    text-align: center;
+    @include adaptive-value('padding-top', 40, 25, 1);
+    @include adaptive-value('padding-bottom', 40, 25, 1);
+}

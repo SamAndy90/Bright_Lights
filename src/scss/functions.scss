@@ -1,0 +1,67 @@
+// ------------  Functions  ---------------
+
+// Розширення по ширині
+@function vw($value, $base: 1920) {
+    @return $value / $base * 100vw;
+}
+
+// Розширення по висоті
+@function vh($value, $base: 1920) {
+    @return $value / $base * 100vh;
+}
+
+
+// ------------  Mixins  ---------------
+
+
+// ------------  Adaptive-Font  ---------------
+
+@mixin adaptive-font ($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $addMobSize: $addSize + $addSize * 0.7;
+    @media (max-width: 767px) {
+        font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{maxWidth}));
+    }
+    @media (min-width: 767px) {
+        font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{maxWidth}));
+    }
+}
+
+
+// ------------  Adaptive-Value  ---------------
+
+@mixin adaptive-value ($property, $startSize, $minSize, $type) {
+    $addSize: $startSize - $minSize;
+    @if $type==1 {
+        //Лише якщо менше контейнера
+        #{$property}: $startSize + px;
+        @media (max-width: #{$maxWidthContainer + px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+        }
+    } @else if $type==2{
+        //Лише якщо більше контейнера
+        @media (min-width: #{$maxWidthContainer + px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+        } 
+    } @else {
+            // Завжди
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+        }
+}
+
+// ------------  FUNCTIONS to(EM, REM, %)  ---------------
+// TO(%)
+@function prc($pxOne, $pxTwo) {
+    $result: math.div($pxOne, $pxTwo) * 100%;
+    @return $result;
+}
+// TO(rem)
+@function rem($px) {
+    $result: math.div($px, 16) + rem;
+    @return $result;
+}
+// TO(em)
+@function em($px) {
+    $result: math.div($px, 16) +em;
+    @return $result;
+}

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', {
+"title": "Bright Lights"
+})
+
+<body>
+    @@include('html/header.html', {})
+    <main class="page">
+
+        <section id="main" class="page__main main-block">
+            <div class="main-block__container">
+                <div class="main-block__content">
+                    <h2 class="main-block__subtitle">New Single</h2>
+                    <h1 class="main-block__title">War For Love</h1>
+                    <div class="main-block__audio player">
+
+                        <div class="player__play--main"><img src="@img/player/play.svg" alt="play-pause"
+                                class="player__play-image--main"></div>
+                        <audio src="" class="player__audio--main"></audio>
+                        <div class="player__progressbar-wrapper--main">
+                            <div class="player__progressbar-container--main">
+                                <div class="player__progressbar--main"></div>
+                                <img src="@img/player/cursor.svg" alt="" class="player__cursor--main">
+                            </div>
+                        </div>
+                        <div class="player__timer--main"><span class="player__timer--current-time--main">00:00</span>-<span
+                                class="player__timer-duration--main">00:00</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page__highlights highlights">
+            <div class="highlights__container">
+                <div class="highlights__cards">
+
+                    <div class="highlights__card card">
+                        <a href="#" class="card__link">
+                            <img src="@img/highlights/studio.png" alt="studio" class="card__background">
+                            <p class="card__info">Working on my upcoming full-lenth
+                                album that`s releasing later this year.
+                            </p>
+                        </a>
+                    </div>
+
+                    <div class="highlights__card card">
+                        <a href="#" class="card__link">
+                            <img src="@img/highlights/label.png" alt="studio" class="card__background">
+                            <p class="card__info">Halloween vibes. <br>
+                                Listen my new track!
+                            </p>
+                        </a>
+                    </div>
+
+                    <div class="highlights__card card">
+                        <a href="#" class="card__link">
+                            <img src="@img/highlights/photo.png" alt="studio" class="card__background">
+                            <p class="card__info">WarForLove is OUT NOW!! <br>
+                                Stream it here!
+                            </p>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="page__about about">
+            <div class="about__container">
+                <div class="about__content">
+
+                    <div class="about__info">
+                        <h2 class="about__title">Bright Lights</h2>
+                        <p class="about__text">Bright Lights is a multi-Grammy nominated singer, songwriter, DJ and
+                            record producer. She has written for numerous <br><br> pop stars including Britney Spears,
+                            Justin Bieber, Usher and Beyoncé. Her catalog has amassed over 1 billion streams worldwide.
+                            More than 100 million of those streams can be attributed to her artist career and include
+                            such hits as Porter Robinson's "Language," 3LAU's "How You Love Me" and her own single
+                            "Runaway." She was also a featured vocalist on Zedd's #1 Clarity album. Her latest music
+                            video, "Put It Down," reached 1 million streams in the first week, releasing independently.
+                            Bright Lights is currently in the studio working on a self-produced album slated for release
+                            in 2020.</p>
+                        <ul class="about__list">
+                            <li class="about__item about__item--mb">Based in: Los Angeles</li>
+                            <li class="about__item about__item--mb">Founded in 2011</li>
+                            <li class="about__item">Genre: #DancePop </li>
+                            <li class="about__item">Label: 333 Recordings</li>
+                        </ul>
+                    </div>
+
+                    <div class="about__media">
+                        <div class="about__media--wrapper">
+                            <div class="about__media--front">
+                                <img src="@img/about/about-photo.png" alt="Girl" class="about__media--item">
+                            </div>
+                            <div class="about__media--behind">
+                                <img src="@img/about/about-car.png" alt="Car" class="about__media--item">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="news" class="page__news news">
+            <div class="news__container">
+                <div class="news__body">
+                    <div class="news__content">
+                        <p class="news__text">“In an age where mainstream music is designed to be as
+                            easily consumed as possible, listening to Bright Lights is
+                            refreshing, to say the least. Her sound is perfect for radio
+                            but complex enough to separate her from other pop newcomers.”</p>
+                        <a href="#news" class="news__link">PopULove.net</a>
+                    </div>
+                    <img src="@img/news/news-photo.png" alt="news" class="news__photo">
+                </div>
+            </div>
+        </section>
+
+        <section id="music" class="page__music music">
+            <div class="music__container">
+                <div class="music__body">
+                    <div class="music__content">
+                        <h2 class="music__title">Last tracks</h2>
+
+                        <div class="music__audio player">
+                            <div class="player__play"><img src="@img/player/play.svg" alt="play-pause"
+                                    class="player__play--image"></div>
+                            <audio src="" class="player__audio"></audio>
+                            <div class="player__progressbar--wrapper">
+                                <div class="player__progressbar--container">
+                                    <div class="player__progressbar"></div>
+                                    <img src="@img/player/cursor.svg" alt="cursor" class="player__cursor">
+                                </div>
+                            </div>
+                            <div class="player__timer"><span class="player__timer--current-time">00:00</span>-<span
+                                    class="player__timer--duration">00:00</span></div>
+                        </div>
+
+                        <ol id="tracklist" class="music__list">
+                            <li class="music__item" data-track="0">3LAU, Bright Lights — How You Love Me</li>
+                            <li class="music__item" data-track="1">Bright Lights, Kaleena Zanders, Kandy — War For Love</li>
+                            <li class="music__item" data-track="2">Pink Is Punk, Benny Benassi, Bright Lights — Ghost</li>
+                            <li class="music__item" data-track="3">Hardwell, Dyro, Bright Lights — Never Say Goodbye</li>
+                            <li class="music__item" data-track="4">Zeds Dead, Dirtyphonics, Bright Lights — Where Are You Now</li>
+                            <li class="music__item" data-track="5">Zedd, Bright Lights — Follow You Down</li>
+                        </ol>
+
+                        <div class="music__services services">
+                            <h4 class="services__title">Follow me:</h4>
+                            <div class="services__social">
+                                <img src="@img/social/social-spotify.svg" alt="spotify" class="services__icon">
+                                <a href="#music" class="services__link services__link--spotify">Spotify</a>
+                            </div>
+                            <div class="services__social">
+                                <img src="@img/social/social-apple.svg" alt="spotify" class="services__icon">
+                                <a href="#music" class="services__link services__link--itunes">iTunes</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="music__media">
+                        <img src="@img/last-tracks/lasttracks-photo.png" alt="poster" class="music__media--poster">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="media" class="page__media media">
+            <div class="media__container">
+                <div class="media__items">
+                    <div class="media__item media__item--vertical">
+                        <a href="#media" class="media__item--link">some #TEXT</a>
+                        <img src="@img/media/media-hall.jpeg" alt="hall">
+                    </div>
+                    <div class="media__item">
+                        <a href="#media" class="media__item--link">some #TEXT</a>
+                        <img src="@img/media/media-car.jpeg" alt="car">
+                    </div>
+                    <div class="media__item">
+                        <a href="#media" class="media__item--link">some #TEXT</a>
+                        <img src="@img/media/media-car-girl.jpeg" alt="car-girl">
+                    </div>
+                    <div class="media__item media__item--vertical">
+                        <a href="#media" class="media__item--link">some #TEXT</a>
+                        <img src="@img/media/media-picture.jpeg" alt="picture">
+                    </div>
+                    <div class="media__item media__item--horizontal">
+                        <a href="#media" class="media__item--link">EDC Las Vegas Mainstage</a>
+                        <img src="@img/media/media-scene.jpeg" alt="scene">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tours" class="page__tours tours">
+            <div class="tours__container">
+                <div class="swiper tours__slider">
+                    <div class="swiper-wrapper tours__slider--wrapper">
+                        <div class="swiper-slide tours__slider--slide">
+                            <article class="tours__card card">
+                                <a href="#tours" class="card__cover">
+                                    <img src="@img/tours/tours-concert.png" alt="festival" class="card__cover--image">
+                                </a>
+                                <h6 class="card__events-name">Chandler, AZ</h6>
+                                <h5 class="card__events-place">The Park at Wild Horse Pass</h5>
+                                <div class="card__footer">
+                                    <span class="card__events-date">Apr 02 2021</span>
+                                    <button class="card__button" type="button">tickets</button>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide tours__slider--slide">
+                            <article class="tours__card card">
+                                <a href="#tours" class="card__cover">
+                                    <img src="@img/tours/tours-rave.png" alt="festival" class="card__cover--image">
+                                </a>
+                                <h6 class="card__events-name">Ibiza, IBZ</h6>
+                                <h5 class="card__events-place">Swag Ibiza Club</h5>
+                                <div class="card__footer">
+                                    <span class="card__events-date">Jul 08 2021</span>
+                                    <button class="card__button" type="button">tickets</button>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide tours__slider--slide">
+                            <article class="tours__card card">
+                                <a href="#tours" class="card__cover">
+                                    <img src="@img/tours/tours-club.png" alt="festival" class="card__cover--image">
+                                </a>
+                                <h6 class="card__events-name">Ibiza, IBZ</h6>
+                                <h5 class="card__events-place">El Swing Ibiza</h5>
+                                <div class="card__footer">
+                                    <span class="card__events-date">Jul 10 2021</span>
+                                    <button class="card__button" type="button">tickets</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev tours__slider-button--prev">
+                        <svg width="40" height="60" viewBox="0 0 40 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.5">
+                            <path d="M0.5 10C0.5 4.7533 4.7533 0.5 10 0.5H39.5V50C39.5 55.2467 35.2467 59.5 30 59.5H0.5V10Z" stroke="white"/>
+                            <path d="M9.64645 30.3536C9.45119 30.1583 9.45119 29.8417 9.64645 29.6464L12.8284 26.4645C13.0237 26.2692 13.3403 26.2692 13.5355 26.4645C13.7308 26.6597 13.7308 26.9763 13.5355 27.1716L10.7071 30L13.5355 32.8284C13.7308 33.0237 13.7308 33.3403 13.5355 33.5355C13.3403 33.7308 13.0237 33.7308 12.8284 33.5355L9.64645 30.3536ZM30 30.5L10 30.5L10 29.5L30 29.5L30 30.5Z" fill="white"/>
+                            </g></svg>
+                    </div>
+                    <div class="swiper-button-next tours__slider-button--next">
+                        <svg width="40" height="60" viewBox="0 0 40 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.5">
+                            <path d="M0.5 10C0.5 4.7533 4.7533 0.5 10 0.5H39.5V50C39.5 55.2467 35.2467 59.5 30 59.5H0.5V10Z" stroke="white"/>
+                            <path d="M30.3536 30.3536C30.5488 30.1583 30.5488 29.8417 30.3536 29.6464L27.1716 26.4645C26.9763 26.2692 26.6597 26.2692 26.4645 26.4645C26.2692 26.6597 26.2692 26.9763 26.4645 27.1716L29.2929 30L26.4645 32.8284C26.2692 33.0237 26.2692 33.3403 26.4645 33.5355C26.6597 33.7308 26.9763 33.7308 27.1716 33.5355L30.3536 30.3536ZM10 30.5L30 30.5L30 29.5L10 29.5L10 30.5Z" fill="white"/>
+                            </g></svg>
+                    </div>
+                </div>
+                <div class="swiper-button-prev prev">
+                    <svg width="40" height="60" viewBox="0 0 40 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.5">
+                        <path d="M0.5 10C0.5 4.7533 4.7533 0.5 10 0.5H39.5V50C39.5 55.2467 35.2467 59.5 30 59.5H0.5V10Z" stroke="white"/>
+                        <path d="M9.64645 30.3536C9.45119 30.1583 9.45119 29.8417 9.64645 29.6464L12.8284 26.4645C13.0237 26.2692 13.3403 26.2692 13.5355 26.4645C13.7308 26.6597 13.7308 26.9763 13.5355 27.1716L10.7071 30L13.5355 32.8284C13.7308 33.0237 13.7308 33.3403 13.5355 33.5355C13.3403 33.7308 13.0237 33.7308 12.8284 33.5355L9.64645 30.3536ZM30 30.5L10 30.5L10 29.5L30 29.5L30 30.5Z" fill="white"/>
+                        </g></svg>
+                </div>
+                <div class="swiper-button-next next">
+                    <svg width="40" height="60" viewBox="0 0 40 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.5">
+                        <path d="M0.5 10C0.5 4.7533 4.7533 0.5 10 0.5H39.5V50C39.5 55.2467 35.2467 59.5 30 59.5H0.5V10Z" stroke="white"/>
+                        <path d="M30.3536 30.3536C30.5488 30.1583 30.5488 29.8417 30.3536 29.6464L27.1716 26.4645C26.9763 26.2692 26.6597 26.2692 26.4645 26.4645C26.2692 26.6597 26.2692 26.9763 26.4645 27.1716L29.2929 30L26.4645 32.8284C26.2692 33.0237 26.2692 33.3403 26.4645 33.5355C26.6597 33.7308 26.9763 33.7308 27.1716 33.5355L30.3536 30.3536ZM10 30.5L30 30.5L30 29.5L10 29.5L10 30.5Z" fill="white"/>
+                        </g>
+                        </svg>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts" class="page__contacts contacts">
+            <div class="contacts__container">
+                <div class="contacts__logo logo">
+                    <a href="index.html" class="logo__link contacts__logo--link">
+                        <img class="logo__label" src="@img/header/logo-label.svg" alt="Label">
+                        <img class="logo__brand" src="@img/header/logo-brand.svg" alt="Brand">
+                    </a>
+                </div>
+                <div class="contacts__data data-contacts">
+                    <div class="data-contacts__items">
+                        <div class="data-contacts__item">
+                            <div class="data-contacts__property">Artist Management:</div>
+                            <a href="#contacts" class="data-contacts__value">Jake Henny</a>
+                        </div>
+                        <div class="data-contacts__item">
+                            <div class="data-contacts__property">EMAIL:</div>
+                            <a href="mailto:jake@brightlightsofficial.com" class="data-contacts__value"
+                                mailto:jake@brightlightsofficial.com>jake@brightlightsofficial.com</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacts__social social">
+                    <ul class="social__list">
+                        <li class="social__li">
+                            <a href="#contacts" class="social__link">
+                                <img src="@img/social/social-apple.svg" alt="apple">
+                            </a>
+                        </li>
+                        <li class="social__li">
+                            <a href="#contacts" class="social__link">
+                                <img src="@img/social/social-spotify.svg" alt="spotify">
+                            </a>
+                        </li>
+                        <li class="social__li">
+                            <a href="#contacts" class="social__link">
+                                <img src="@img/social/social-insta.svg" alt="insta">
+                            </a>
+                        </li>
+                        <li class="social__li">
+                            <a href="#contacts" class="social__link">
+                                <img src="@img/social/social-youtube.svg" alt="youtube">
+                            </a>
+                        </li>
+                        <li class="social__li">
+                            <a href="#contacts" class="social__link">
+                                <img src="@img/social/social-twitter.svg" alt="twitter">
+                            </a>
+                        </li>
+                        <li class="social__li">
+                            <a href="#contacts" class="social__link">
+                                <img src="@img/social/social-fb.svg" alt="facebook">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    @@include('html/footer.html', {})
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

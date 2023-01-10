@@ -1,0 +1,11 @@
+body {
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    background: $bgColor;
+    color: $mainColor;
+}
+
+h2 {
+    @include adaptive-value('font-size', 48, 34, 1);
+    line-height: math.div(72, 48);
+}
